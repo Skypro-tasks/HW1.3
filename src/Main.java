@@ -136,14 +136,12 @@ public class Main {
 
         if(age < 23){
             interestRate *= 1.01;
-            if(salary > 80_000){
-                interestRate = interestRate - (interestRate * 0.007);
-            }
         } else if(age < 30){
             interestRate *= 1.005;
-            if(salary > 80_000){
-                interestRate = interestRate - (interestRate * 0.007);
-            }
+        }
+
+        if(salary > 80_000){
+            interestRate = interestRate - (interestRate * 0.007);
         }
 
         monthlyPayment = wantedSum * interestRate / loanTerms;
