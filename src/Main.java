@@ -11,20 +11,25 @@ public class Main {
 
 
         //Task 2
-        clientOS = 0;
         int clientDeviceYear = 2017;
-        if(clientDeviceYear < 2015){
-            if(clientOS == 0 && clientDeviceYear >= 2015){
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            }else{
-                System.out.println("Установите облегченную версию приложения для Android по ссылке");
-            }
-        }else{
-            if(clientOS == 0){
+        if(clientDeviceYear < 2015 && clientOS == 0){
+            clientOS = 2;
+        }else if(clientDeviceYear < 2015 && clientOS == 1){
+            clientOS = 3;
+        }
+        switch (clientOS){
+            case 0:
                 System.out.println("Установите версию приложения для iOS по ссылке");
-            }else{
+                break;
+            case 1:
                 System.out.println("Установите версию приложения для Android по ссылке");
-            }
+                break;
+            case 2:
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                break;
+            case 3:
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                break;
         }
         System.out.println();
 
@@ -57,9 +62,11 @@ public class Main {
 
 
         //Task 5
-        int month = 13;
-        switch (month){
-            case 1:
+        int month = 8;
+        if(month > 0 || month < 13){
+
+            switch (month) {
+                case 1:
                 System.out.println("January");
                 break;
             case 2:
@@ -95,9 +102,7 @@ public class Main {
             case 12:
                 System.out.println("December");
                 break;
-            default:
-                System.out.println("Incorrect number");
-
+            }
         }
         System.out.println();
 
