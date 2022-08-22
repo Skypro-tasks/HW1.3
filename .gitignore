@@ -1,0 +1,4 @@
+# Project exclude paths
+/.idea/
+/out/
+/HW_SP3.iml
